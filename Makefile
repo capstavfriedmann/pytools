@@ -12,4 +12,4 @@ ARGS=$(wordlist 2, $(words $(MAKECMDGOALS)), $(MAKECMDGOALS))
 setup:
 	git checkout -b temp
 	@$(foreach arg,$(ARGS),echo Running command for $(arg); git merge origin/$(arg);)
-	Remove-Item -Path ".\.git" -Recurse -Force
+	rm -rf .git
