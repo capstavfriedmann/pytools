@@ -13,7 +13,7 @@ setup:
 	rm -rf .git
 	pip install python-dotenv
 	python ./pytools/cli/load_env.py
-	pytest ./test
+	python -m pytest ./test
 	
 clear_cache:
 	python ./pytools/cli/clear_cache.py
